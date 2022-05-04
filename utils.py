@@ -4,6 +4,7 @@ import numpy as np
 from fastdtw import fastdtw
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
+import torch
 
 # files = {
 #     'pems03': ['PEMS03/pems03.npz', 'PEMS03/distance.csv'],
