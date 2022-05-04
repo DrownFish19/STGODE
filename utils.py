@@ -4,17 +4,25 @@ import numpy as np
 from fastdtw import fastdtw
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
-import torch
+
+# files = {
+#     'pems03': ['PEMS03/pems03.npz', 'PEMS03/distance.csv'],
+#     'pems04': ['PEMS04/pems04.npz', 'PEMS04/distance.csv'],
+#     'pems07': ['PEMS07/pems07.npz', 'PEMS07/distance.csv'],
+#     'pems08': ['PEMS08/pems08.npz', 'PEMS08/distance.csv'],
+#     'pemsbay': ['PEMSBAY/pems_bay.npz', 'PEMSBAY/distance.csv'],
+#     'pemsD7M': ['PeMSD7M/PeMSD7M.npz', 'PeMSD7M/distance.csv'],
+#     'pemsD7L': ['PeMSD7L/PeMSD7L.npz', 'PeMSD7L/distance.csv']
+# }
 
 
 files = {
-    'pems03': ['PEMS03/pems03.npz', 'PEMS03/distance.csv'],
-    'pems04': ['PEMS04/pems04.npz', 'PEMS04/distance.csv'],
-    'pems07': ['PEMS07/pems07.npz', 'PEMS07/distance.csv'],
-    'pems08': ['PEMS08/pems08.npz', 'PEMS08/distance.csv'],
-    'pemsbay': ['PEMSBAY/pems_bay.npz', 'PEMSBAY/distance.csv'],
-    'pemsD7M': ['PeMSD7M/PeMSD7M.npz', 'PeMSD7M/distance.csv'],
-    'pemsD7L': ['PeMSD7L/PeMSD7L.npz', 'PeMSD7L/distance.csv']
+    'pems03': ['PEMS03/PEMS03.npz', 'PEMS03/PEMS03.csv'],
+    'pems04': ['PEMS04/PEMS04.npz', 'PEMS04/PEMS04.csv'],
+    'pems07': ['PEMS07/PEMS07.npz', 'PEMS07/PEMS07.csv'],
+    'pems08': ['PEMS08/PEMS08.npz', 'PEMS08/PEMS08.csv'],
+    'hzme_inflow': ['HZME_INFLOW/HZME_INFLOW.npz', 'HZME_INFLOW/HZME_INFLOW.csv'],
+    'hzme_outflow': ['HZME_OUTFLOW/HZME_OUTFLOW.npz', 'HZME_OUTFLOW/HZME_OUTFLOW.csv']
 }
 
 def read_data(args):
